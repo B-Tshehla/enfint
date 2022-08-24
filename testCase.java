@@ -4,20 +4,12 @@ import java.lang.Math;
 class Conversion{
     //Function converts decimal to hexadecimal
     public static String DecToHex(int dec){
-        char[] hexDigits = {'0','1','2','3','4','5','6','7','7','8','9','A','B','C','D','E','F'};
+        char[] hexDigits = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         String hex ="";
         int rem= 0;
         while(dec != 0){
             rem = dec % 16;
-            if(rem > 5)
-            {
-                hex = hexDigits[rem+1] + hex;    
-            }
-            else
-            {
-                hex = hexDigits[rem] + hex;
-            }
-            
+            hex = hexDigits[rem] + hex;    
             dec = dec/16;
         }
         return hex;
@@ -65,8 +57,6 @@ class Conversion{
         int dec = 0;
         int bin = 0;
         
-        
-        
         //convertion selection
         System.out.println("Please select the convertion you want to use:");
         System.out.println("1 - Decimal to hexadecimal (base 10 - 16)");
@@ -101,12 +91,10 @@ class Conversion{
             else
             {
                 System.out.println("Invalid Number is greater than 10000");
-            }
-               
+            }     
         }
         else{
             System.out.println("Invalid input"); 
         }
-
     }
 }
